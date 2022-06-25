@@ -1,6 +1,6 @@
 from brain_games.start_game import start_game
 
-__GAME_NAME = 'even'
+__GAME_NAME = 'calc'
 
 
 def main() -> None:
