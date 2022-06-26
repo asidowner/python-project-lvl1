@@ -13,15 +13,17 @@ def round_data() -> tuple[str, str]:
     len_progression: int = get_random_int_from_range(__MIN_LEN_PROGRESSION,
                                                      __MAX_LEN_PROGRESSION)
 
-    result_list = __get_progression(first_value, increment, len_progression)
+    result_list: list = __get_progression(first_value,
+                                          increment,
+                                          len_progression)
 
     missing_index: int = get_random_int_from_range(0, len_progression - 1)
     expected_answer: int = result_list[missing_index - 1]
 
-    question = ''
+    question: str = ''
     for value in result_list:
         question += f"{value if value != expected_answer else '..'} "
-    question = question.strip()
+    question: str = question.strip()
 
     return question, str(expected_answer)
 
