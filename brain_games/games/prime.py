@@ -13,7 +13,7 @@ def round_data() -> tuple[str, str]:
 
 
 def __is_prime(number: int) -> bool:
-    result: bool = number != 1
+    result: bool = number > 1
     i: int = 2
     while i < number:
         if number % i == 0:
