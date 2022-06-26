@@ -32,7 +32,7 @@ def start_game(game_name: str) -> None:
 
 
 def __welcome_user() -> str:
-    name: str = prompt_string('May i have your name? ')
+    name: str = prompt_string('May I have your name? ')
     return name
 
 
