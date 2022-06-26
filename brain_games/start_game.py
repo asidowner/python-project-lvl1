@@ -16,9 +16,7 @@ __GAME_DESCRIPTION: dict = {
 
 
 def start_game(game_name: str) -> None:
-    print('Welcome to the Brain Games!')
     name: str = __welcome_user()
-    print(f'Hello, {name}!')
     counter: int = 0
     print(__GAME_DESCRIPTION[game_name])
     while counter < __ROUNDS:
@@ -32,7 +30,9 @@ def start_game(game_name: str) -> None:
 
 
 def __welcome_user() -> str:
+    print('Welcome to the Brain Games!')
     name: str = prompt_string('May I have your name? ')
+    print(f'Hello, {name}!')
     return name
 
 
