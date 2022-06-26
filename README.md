@@ -5,4 +5,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bc5577946aa6eb164707/maintainability)](https://codeclimate.com/github/asidowner/python-project-lvl1/maintainability)
 
 ### Example of the program
-[![asciicast](https://asciinema.org/a/Spi9bRZZZj6sMTAaZNTMA4vsy.svg)](https://asciinema.org/a/Spi9bRZZZj6sMTAaZNTMA4vsy)
+[![asciicast](https://asciinema.org/a/DSIAlOVRan0bcnUzuWV1u9Fte.svg)](https://asciinema.org/a/DSIAlOVRan0bcnUzuWV1u9Fte)

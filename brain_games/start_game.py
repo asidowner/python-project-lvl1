@@ -32,7 +32,7 @@ def start_game(game_name: str) -> None:
 def __welcome_user() -> str:
     print('Welcome to the Brain Games!')
     name: str = prompt_string('May i have your name? ')
-    print(f'Hello, {name}!')
+    print(f'\nHello, {name}!')
     return name
 
 
