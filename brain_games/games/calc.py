@@ -2,13 +2,14 @@ from brain_games.utils import get_random_int_from_range
 
 DESCRIPTION: str = 'What is the result of the expression?'
 __OPERATORS: tuple = '-', '+', '*'
+__MIN_RANGE = 0
 __RANGE = 25
 
 
 def round_data() -> tuple[str, str]:
     operator: str = __get_random_operator()
-    first_value: int = get_random_int_from_range(0, __RANGE)
-    second_value: int = get_random_int_from_range(0, __RANGE)
+    first_value: int = get_random_int_from_range(__MIN_RANGE, __RANGE)
+    second_value: int = get_random_int_from_range(__MIN_RANGE, __RANGE)
 
     if operator == '-':
         expected_answer: int = first_value - second_value

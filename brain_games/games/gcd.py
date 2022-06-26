@@ -1,12 +1,13 @@
 from brain_games.utils import get_random_int_from_range
 
 DESCRIPTION: str = 'Find the greatest common divisor of given numbers.'
+__MIN_RANGE = 1
 __RANGE = 100
 
 
 def round_data() -> tuple[str, str]:
-    first_value: int = get_random_int_from_range(0, __RANGE)
-    second_value: int = get_random_int_from_range(0, __RANGE)
+    first_value: int = get_random_int_from_range(__MIN_RANGE, __RANGE)
+    second_value: int = get_random_int_from_range(__MIN_RANGE, __RANGE)
 
     question: str = f"{first_value} {second_value}"
     expected_answer: int = __get_gcd(first_value, second_value)

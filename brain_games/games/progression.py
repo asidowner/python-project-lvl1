@@ -3,13 +3,17 @@ from brain_games.utils import get_random_int_from_range
 DESCRIPTION: str = 'What number is missing in the progression?'
 __MIN_LEN_PROGRESSION = 5
 __MAX_LEN_PROGRESSION = 10
+__MIN_VALUE = 0
+__MIN_INCREMENT = 1
 __RANGE_FOR_DIFF = 20
 __FIRST_VALUE_RANGE = 100
 
 
 def round_data() -> tuple[str, str]:
-    first_value: int = get_random_int_from_range(0, __FIRST_VALUE_RANGE)
-    increment: int = get_random_int_from_range(1, __RANGE_FOR_DIFF)
+    first_value: int = get_random_int_from_range(__MIN_VALUE,
+                                                 __FIRST_VALUE_RANGE)
+    increment: int = get_random_int_from_range(__MIN_INCREMENT,
+                                               __RANGE_FOR_DIFF)
     len_progression: int = get_random_int_from_range(__MIN_LEN_PROGRESSION,
                                                      __MAX_LEN_PROGRESSION)
 
