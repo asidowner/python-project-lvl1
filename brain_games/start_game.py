@@ -1,24 +1,13 @@
 from prompt import string as prompt_string
-from brain_games.games import even
-from brain_games.games import calc
-from brain_games.games import gcd
-from brain_games.games import progression
-from brain_games.games import prime
+from brain_games.game_data import get_round_data, get_description
 
 __ROUNDS: int = 3
-__GAME_DESCRIPTION: dict = {
-    'even': even.DESCRIPTION,
-    'calc': calc.DESCRIPTION,
-    'gcd': gcd.DESCRIPTION,
-    'progression': progression.DESCRIPTION,
-    'prime': prime.DESCRIPTION
-}
 
 
 def start_game(game_name: str) -> None:
     name: str = __welcome_user()
     counter: int = 0
-    print(__GAME_DESCRIPTION[game_name])
+    print(get_description(game_name))
     while counter < __ROUNDS:
         result = __next_round(game_name, name)
         if not result:
@@ -37,7 +26,7 @@ def __welcome_user() -> str:
 
 
 def __next_round(game_name: str, name: str) -> bool:
-    question, expected_answer = __get_round_data(game_name)
+    question, expected_answer = get_round_data(game_name)
     print(f'Question: {question}')
     answer: str = prompt_string('Your answer: ')
     result: bool = answer == expected_answer
@@ -48,19 +37,3 @@ def __next_round(game_name: str, name: str) -> bool:
         return False
     print("Correct!")
     return True
-
-
-def __get_round_data(game_name: str) -> tuple[str, str]:
-    if game_name == 'even':
-        question, expected_answer = even.round_data()
-    elif game_name == 'calc':
-        question, expected_answer = calc.round_data()
-    elif game_name == 'gcd':
-        question, expected_answer = gcd.round_data()
-    elif game_name == 'progression':
-        question, expected_answer = progression.round_data()
-    elif game_name == 'prime':
-        question, expected_answer = prime.round_data()
-    else:
-        raise Exception("Unknown game. Let's try again!")
-    return question, expected_answer
