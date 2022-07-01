@@ -1,6 +1,8 @@
 from random import randint
 
-DESCRIPTION: str = 'What number is missing in the progression?'
+from brain_games.start_game import start_game
+
+__DESCRIPTION: str = 'What number is missing in the progression?'
 __MIN_LEN_PROGRESSION = 5
 __MAX_LEN_PROGRESSION = 10
 __MIN_VALUE = 0
@@ -9,7 +11,7 @@ __RANGE_FOR_DIFF = 20
 __FIRST_VALUE_RANGE = 100
 
 
-def round_data() -> tuple[str, str]:
+def __round_data() -> tuple[str, str]:
     first_value: int = randint(__MIN_VALUE,
                                __FIRST_VALUE_RANGE)
     increment: int = randint(__MIN_INCREMENT,
@@ -43,4 +45,5 @@ def __get_progression(first_value: int,
     return result_list
 
 
-round_data()
+def main():
+    start_game(__DESCRIPTION, __round_data)

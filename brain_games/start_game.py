@@ -1,15 +1,14 @@
 from prompt import string as prompt_string
-from brain_games.game_data import get_round_data, get_description
 
 __ROUNDS: int = 3
 
 
-def start_game(game_name: str) -> None:
+def start_game(description: str, round_data) -> None:
     name: str = __welcome_user()
     counter: int = 0
-    print(get_description(game_name))
+    print(description)
     while counter < __ROUNDS:
-        result = __next_round(game_name, name)
+        result = __next_round(round_data, name)
         if not result:
             break
         elif counter == 2:
@@ -25,8 +24,8 @@ def __welcome_user() -> str:
     return name
 
 
-def __next_round(game_name: str, name: str) -> bool:
-    question, expected_answer = get_round_data(game_name)
+def __next_round(round_data: staticmethod, name: str) -> bool:
+    question, expected_answer = round_data()
     print(f'Question: {question}')
     answer: str = prompt_string('Your answer: ')
     result: bool = answer == expected_answer

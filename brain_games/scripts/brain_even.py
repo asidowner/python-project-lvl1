@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-from brain_games.start_game import start_game
+import brain_games.games.even as even
 
 __GAME_NAME = 'even'
 
 
 def main() -> None:
-    start_game(__GAME_NAME)
+    even.main()

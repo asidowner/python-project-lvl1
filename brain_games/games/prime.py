@@ -1,12 +1,14 @@
 from random import randint
 
-DESCRIPTION = "Answer \"yes\" if given number is prime. " \
-              "Otherwise answer \"no\"."
+from brain_games.start_game import start_game
+
+__DESCRIPTION = "Answer \"yes\" if given number is prime. " \
+                "Otherwise answer \"no\"."
 __MIN_RANGE = 0
 __RANGE = 100
 
 
-def round_data() -> tuple[str, str]:
+def __round_data() -> tuple[str, str]:
     question_digit: int = randint(__MIN_RANGE, __RANGE)
     expected_answer: str = 'yes' if __is_prime(question_digit) else 'no'
     question: str = f'{question_digit}'
@@ -22,3 +24,7 @@ def __is_prime(number: int) -> bool:
             break
         i += 1
     return result
+
+
+def main():
+    start_game(__DESCRIPTION, __round_data)

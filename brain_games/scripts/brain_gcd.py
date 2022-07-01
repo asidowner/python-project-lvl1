@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-from brain_games.start_game import start_game
+import brain_games.games.gcd as gcd
 
 __GAME_NAME = 'gcd'
 
 
 def main() -> None:
-    start_game(__GAME_NAME)
+    gcd.main()
