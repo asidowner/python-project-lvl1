@@ -1,8 +1,7 @@
 #!/usr/bin/env python
-import brain_games.games.progression as progression
-
-__GAME_NAME = 'progression'
+from brain_games.start_game import start_game
+import brain_games.games.progression as game
 
 
 def main() -> None:
-    progression.main()
+    start_game(game)

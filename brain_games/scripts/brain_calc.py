@@ -1,8 +1,7 @@
 #!/usr/bin/env python
-import brain_games.games.calc as calc
-
-__GAME_NAME = 'calc'
+from brain_games.start_game import start_game
+import brain_games.games.calc as game
 
 
 def main() -> None:
-    calc.main()
+    start_game(game)

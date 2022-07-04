@@ -1,8 +1,7 @@
 #!/usr/bin/env python
-import brain_games.games.prime as prime
-
-__GAME_NAME = 'prime'
+from brain_games.start_game import start_game
+import brain_games.games.prime as game
 
 
 def main() -> None:
-    prime.main()
+    start_game(game)
