@@ -1,21 +1,21 @@
 from random import randint
 
 DESCRIPTION: str = 'What number is missing in the progression?'
-__MIN_LEN_PROGRESSION = 5
-__MAX_LEN_PROGRESSION = 10
-__MIN_VALUE = 0
-__MIN_INCREMENT = 1
-__RANGE_FOR_DIFF = 20
-__FIRST_VALUE_RANGE = 100
+_MIN_FIRST_VALUE_RANGE = 0
+_MAX_FIRST_VALUE_RANGE = 100
+_MIN_INCREMENT_RANGE = 1
+_MAX_INCREMENT_RANGE = 20
+_MIN_LEN_PROGRESSION = 5
+_MAX_LEN_PROGRESSION = 10
 
 
-def round_data() -> tuple[str, str]:
-    first_value: int = randint(__MIN_VALUE,
-                               __FIRST_VALUE_RANGE)
-    increment: int = randint(__MIN_INCREMENT,
-                             __RANGE_FOR_DIFF)
-    len_progression: int = randint(__MIN_LEN_PROGRESSION,
-                                   __MAX_LEN_PROGRESSION)
+def get_round_data() -> tuple[str, str]:
+    first_value: int = randint(_MIN_FIRST_VALUE_RANGE,
+                               _MAX_FIRST_VALUE_RANGE)
+    increment: int = randint(_MIN_INCREMENT_RANGE,
+                             _MAX_INCREMENT_RANGE)
+    len_progression: int = randint(_MIN_LEN_PROGRESSION,
+                                   _MAX_LEN_PROGRESSION)
 
     result_list: list = __get_progression(first_value,
                                           increment,

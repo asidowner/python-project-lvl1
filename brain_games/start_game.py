@@ -1,14 +1,14 @@
 from prompt import string as prompt_string
 
-__ROUNDS: int = 3
+_ROUNDS: int = 3
 
 
 def start_game(game) -> None:
     name: str = __welcome_user()
     counter: int = 0
     print(game.DESCRIPTION)
-    while counter < __ROUNDS:
-        question, expected_answer = game.round_data()
+    while counter < _ROUNDS:
+        question, expected_answer = game.get_round_data()
         print(f'Question: {question}')
         answer: str = prompt_string('Your answer: ')
         result = answer == expected_answer
