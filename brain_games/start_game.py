@@ -18,7 +18,7 @@ def start_game(game) -> None:
             print(f"Let's try again, {name}!")
             break
         else:
-            print("Correct!")
+            print('Correct!')
             if counter == 2:
                 print(f'Congratulations, {name}!')
                 break

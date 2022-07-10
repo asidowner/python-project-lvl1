@@ -1,7 +1,7 @@
 from random import randint
 
-DESCRIPTION = "Answer \"yes\" if given number is prime. " \
-              "Otherwise answer \"no\"."
+DESCRIPTION = 'Answer \"yes\" if given number is prime. ' \
+              'Otherwise answer \"no\".'
 _MIN_RANGE = 0
 _MAX_RANGE = 100
 

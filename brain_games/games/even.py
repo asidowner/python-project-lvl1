@@ -1,6 +1,6 @@
 from random import randint
 
-DESCRIPTION = "Answer \"yes\" if the number is even, otherwise answer \"no\"."
+DESCRIPTION = 'Answer \"yes\" if the number is even, otherwise answer \"no\".'
 _MIN_RANGE = 0
 _MAX_RANGE = 100
 
